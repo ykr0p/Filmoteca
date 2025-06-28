@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp") version "1.9.0-1.0.13" // Плагин KSP для обработки аннотаций Room
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13" // Plagin KSP for обработки annotations Room
+
 }
 
 android {
@@ -38,12 +39,13 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true // Включение ViewBinding
+        viewBinding = true // Turn on ViewBinding
     }
+
 }
 
 dependencies {
-    // Сетевые запросы
+    // Network requests
     implementation(libs.okhttp)
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
@@ -56,7 +58,7 @@ dependencies {
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.runtime.ktx)
 
-    // База данных
+    // Data base
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.ksp) // Обработчик аннотаций Room
@@ -68,7 +70,7 @@ dependencies {
     // JSON
     implementation(libs.gson)
 
-    // UI компоненты
+    // UI components
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -77,8 +79,15 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.activity.ktx) // Для by viewModels()
 
-    // Тестирование
+    // Tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Material Design 3
+    implementation(libs.androidx.benchmark.macro)
+    implementation(libs.my.library)
+
+    // обёртка над стандартным Log в Android
+    implementation(libs.timber)
 }

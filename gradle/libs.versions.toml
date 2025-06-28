@@ -3,14 +3,20 @@ agp = "8.10.1" # Android Gradle Plugin
 kotlin = "2.0.21" # Kotlin
 ksp = "2.0.21-1.0.20" # Совместим с Kotlin 2.0.21
 
+timber = "5.0.1" # обёртка над стандартным Log в Android
+
+# Material Design 3
+androidx-macro-benchmark = "1.3.4"
+my-library = "1.4"
+
 # Версии библиотек
 coreKtx = "1.16.0"
 appcompat = "1.7.1"
 material = "1.12.0"
 constraintlayout = "2.2.1"
 activity = "1.10.1"
-activityKtx = "1.8.2"
-recyclerview = "1.3.2"
+activityKtx = "1.10.1"
+recyclerview = "1.4.0"
 
 # Сетевые библиотеки
 retrofit = "2.11.0"
@@ -18,8 +24,8 @@ okhttp = "4.12.0"
 
 # Остальные библиотеки
 coil = "2.5.0"
-lifecycle = "2.7.0"
-room = "2.6.1"
+lifecycle = "2.9.1"
+room = "2.7.2"
 coroutines = "1.7.3"
 gson = "2.11.0"
 
@@ -29,6 +35,14 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 
 [libraries]
+
+# обёртка над стандартным Log в Android
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Material Design 3
+androidx-benchmark-macro = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "androidx-macro-benchmark" }
+my-library = { group = "com.myapplication", name = "mylibrary", version.ref = "my-library" }
+
 # Сетевые библиотеки
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
