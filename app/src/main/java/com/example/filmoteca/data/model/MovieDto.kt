@@ -9,6 +9,7 @@ class MovieDto {
     LiveData
     <List<CountryDto>
     ViewModel
+    try recyclerView again
 
     в чем прикол записи:
     private val _countries = MutableLiveData<List<CountryDto>>()
