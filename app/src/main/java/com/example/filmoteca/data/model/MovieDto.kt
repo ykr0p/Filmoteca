@@ -1,17 +1,10 @@
 package com.example.filmoteca.data.model
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import com.google.gson.annotations.SerializedName
 
-class MovieDto {
-    РАЗОБРАТЬСЯ:
-    как взаимодействуют CountryDto RetrofitInit TmdbApi CountryViewModel между собой
-    LiveData
-    <List<CountryDto>
-    ViewModel
-    try recyclerView again
+data class MovieDto (
+        val id: Int,
+        @SerializedName("poster_path") val posterPath: String?,
+        @SerializedName("vote_average") val rate: Double,
 
-    в чем прикол записи:
-    private val _countries = MutableLiveData<List<CountryDto>>()
-    val countries: LiveData<List<CountryDto>> = _countries
-}
+)

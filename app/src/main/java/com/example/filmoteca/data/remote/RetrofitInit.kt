@@ -25,6 +25,6 @@ object RetrofitInit {
         .client(okHttpClient)
         .build()
 
-    val api = retrofit.create(TmdbApi::class.java)
+    val api: TmdbApi = retrofit.create(TmdbApi::class.java)
 
 }
