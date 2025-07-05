@@ -1,5 +1,6 @@
-package com.example.filmoteca.data.remote
+package com.example.filmoteca.data.remote.network
 
+import com.example.filmoteca.data.remote.api.MovieApi
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,6 +26,6 @@ object RetrofitInit {
         .client(okHttpClient)
         .build()
 
-    val api: TmdbApi = retrofit.create(TmdbApi::class.java)
+    val api: MovieApi = retrofit.create(MovieApi::class.java)
 
 }

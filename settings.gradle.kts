@@ -17,6 +17,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        //специальный репозиторий для KSP
+        maven("https://oss.sonatype.org/content/repositories/snapshots/")
     }
 }
 

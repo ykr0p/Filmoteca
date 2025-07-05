@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp") version "1.9.0-1.0.13" // Plagin KSP for обработки annotations Room
+    alias(libs.plugins.ksp) // Plagin KSP for обработки annotations Room
 
 }
 
@@ -45,12 +45,13 @@ android {
 }
 
 dependencies {
+
     // Network requests
     implementation(libs.okhttp)
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
 
-    // Загрузка изображений
+    // Coil
     implementation(libs.coil)
 
     // Архитектурные компоненты
@@ -85,8 +86,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Material Design 3
-    implementation(libs.androidx.benchmark.macro)
-    implementation(libs.my.library)
+
 
     // обёртка над стандартным Log в Android
     implementation(libs.timber)
