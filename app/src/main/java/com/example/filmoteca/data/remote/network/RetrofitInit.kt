@@ -1,6 +1,6 @@
 package com.example.filmoteca.data.remote.network
 
-import com.example.filmoteca.data.remote.api.MovieApi
+import com.example.filmoteca.data.remote.api.MovieApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,7 +12,7 @@ object RetrofitInit {
             val request = chain.request().newBuilder()
                 .addHeader(
                     "Authorization",
-                    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NmExODBhMDJiZGJjZTVhODg4YTAwYmU5NDM1ZjY4ZSIsIm5iZiI6MTc1MDYxMTUxOC40MzYsInN1YiI6IjY4NTgzNjNlYjllM2MzMjkxZWE3OTZlMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nYdbPsL2zDZ_43ux73lDZA_UaDq8XcpoE1uFm6OpkUY"
+                    "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NmExODBhMDJiZGJjZTVhODg4YTAwYmU5NDM1ZjY4ZSIsIm5iZiI6MTc1MDYxMTUxOC40MzYsInN1YiI6IjY4NTgzNjNlYjllM2MzMjkxZWE3OTZlMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nYdbPsL2zDZ_43ux73lDZA_UaDq8XcpoE1uFm6OpkUY"
                 )
                 .addHeader("accept", "application/json")
                 .build()
@@ -26,6 +26,6 @@ object RetrofitInit {
         .client(okHttpClient)
         .build()
 
-    val api: MovieApi = retrofit.create(MovieApi::class.java)
+    val api: MovieApiService = retrofit.create(MovieApiService::class.java)
 
 }

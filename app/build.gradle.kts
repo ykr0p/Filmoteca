@@ -87,7 +87,7 @@ dependencies {
 
     // Material Design 3
 
-
     // обёртка над стандартным Log в Android
     implementation(libs.timber)
+
 }
