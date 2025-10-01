@@ -7,14 +7,11 @@ import retrofit2.http.Query
 interface MovieApiService {
 
     @GET("discover/movie")
-    suspend fun getPopularMovies(
-        @Query("language") language: String = "ru-RU",
-        @Query("sort_by") sortBy: String = "primary_release_date.desc",
-        @Query("include_adult") includeAdult: Boolean = false,
-        @Query("include_video") includeVideo: Boolean = false,
-        @Query("page") page: Int = 1
-
+    suspend fun getReleasedMovies(
+        @Query("page") page: Int = 1,
+        @Query("language") language: String = "en-US",
     ): MovieResponseDto
+
 
 
 }

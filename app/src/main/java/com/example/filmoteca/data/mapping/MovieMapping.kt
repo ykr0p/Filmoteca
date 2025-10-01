@@ -9,5 +9,4 @@ fun MovieDto.toDomain(): Movie = Movie(
     posterUrl = posterPath?.let { if (it.isNotBlank()) "https://image.tmdb.org/t/p/w500$it" else null },
     rating = voteAverage.coerceIn(0.0..10.0),
 
-
 )

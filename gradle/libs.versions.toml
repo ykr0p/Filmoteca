@@ -33,14 +33,17 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 
+# Paging 3
+paging = "3.3.6"
+
 [libraries]
 
 
 # обёртка над стандартным Log в Android
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
-# Material Design 3
-
+# Paging 3
+paging-runtime-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "paging"}
 
 # Сетевые библиотеки
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }

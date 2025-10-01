@@ -4,12 +4,12 @@ package com.example.filmoteca.presentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.filmoteca.domain.movie.model.Movie
-import com.example.filmoteca.domain.movie.usecase.GetPopularMoviesUseCase
+import com.example.filmoteca.domain.movie.usecase.GetReleasedMoviesUseCase
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 class MovieListViewModel(
-    private val getPopularMoviesUseCase: GetPopularMoviesUseCase
+    private val getReleasedMoviesUseCase: GetReleasedMoviesUseCase
 ) : ViewModel() {
 
     private val _movies = MutableStateFlow<List<Movie>>(emptyList())
@@ -21,7 +21,7 @@ class MovieListViewModel(
     fun loadMovies() {
         viewModelScope.launch {
             try {
-                getPopularMoviesUseCase()
+                getReleasedMoviesUseCase()
                     .collect { movies ->
                         _movies.value = movies
                     }

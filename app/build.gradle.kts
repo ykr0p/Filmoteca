@@ -62,6 +62,7 @@ dependencies {
     // Data base
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+
     ksp(libs.room.ksp) // Обработчик аннотаций Room
 
     // Асинхронность
@@ -85,9 +86,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Material Design 3
 
     // обёртка над стандартным Log в Android
     implementation(libs.timber)
+
+    implementation(libs.paging.runtime.ktx)
 
 }
