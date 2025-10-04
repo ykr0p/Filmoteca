@@ -5,20 +5,20 @@
     <item
         android:title=""
         android:id="@+id/home"
-        android:icon="@color/black"
+        android:icon="@drawable/common_home"
         />
 
     <item
         android:title=""
         android:id="@+id/explore"
-        android:icon="@color/black"
+        android:icon="@drawable/common_explore"
 
         />
 
     <item
         android:title=""
         android:id="@+id/profile"
-        android:icon="@color/black"
+        android:icon="@drawable/common_profile"
 
         />
 </menu>
