@@ -48,6 +48,16 @@
         app:abb_indicatorColor = "@color/white"
         app:abb_indicatorAnimation="slide"
 
+        app:abb_tabAnimation="slide"
+        app:abb_tabAnimationSelected="slide"
+        app:abb_animationInterpolator="@android:anim/anticipate_overshoot_interpolator"
+
+        app:abb_selectedTabType="icon"
+        app:abb_tabColor="@android:color/holo_blue_light"
+        app:abb_tabColorSelected="@color/black"
+        app:abb_tabColorDisabled="@android:color/holo_blue_light"
+        app:abb_iconSize="30dp"
+
 
 
         />
