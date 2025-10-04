@@ -92,4 +92,6 @@ dependencies {
 
     implementation(libs.paging.runtime.ktx)
 
+    implementation(libs.library)
+
 }

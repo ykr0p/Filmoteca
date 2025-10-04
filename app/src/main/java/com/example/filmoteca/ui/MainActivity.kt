@@ -14,7 +14,7 @@ import com.example.filmoteca.data.remote.network.RetrofitInit
 import com.example.filmoteca.data.repositoryimpl.MovieRepositoryImpl
 import com.example.filmoteca.databinding.ActivityMainBinding
 import com.example.filmoteca.domain.movie.model.Movie
-import com.example.filmoteca.domain.movie.usecase.GetPopularMoviesUseCase
+import com.example.filmoteca.domain.movie.usecase.GetReleasedMoviesUseCase
 import com.example.filmoteca.presentation.viewmodel.MovieListViewModel
 import com.example.filmoteca.presentation.viewmodel.MovieListViewModelFactory
 import com.example.filmoteca.ui.movie.adapter.MovieAdapter
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val api = RetrofitInit.api
         val remoteDataSource = MovieRemoteDataSourceImpl(api)
         val repository = MovieRepositoryImpl(remoteDataSource)
-        val useCase = GetPopularMoviesUseCase(repository)
+        val useCase = GetReleasedMoviesUseCase(repository)
         val factory = MovieListViewModelFactory(useCase)
 
         // Создание ViewModel

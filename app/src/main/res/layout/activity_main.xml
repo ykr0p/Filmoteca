@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <!-- RecyclerView для отображения списка стран -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/moviesRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_margin="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,15 +19,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- ProgressBar внизу -->
-    <ProgressBar
-        android:id="@+id/loadMoreProgress"
-        style="?android:attr/progressBarStyleHorizontal"
+    <FrameLayout
+        android:id="@+id/mainActFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:indeterminate="true"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainActBottomNav"
+        />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mainActBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActFrameLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav"
+        android:background="#262626"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

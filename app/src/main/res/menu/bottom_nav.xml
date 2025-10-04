@@ -3,17 +3,22 @@
 
 
     <item
-        android:id="@+id/"
-        android:icon=""
+        android:title=""
+        android:id="@+id/home"
+        android:icon="@color/black"
         />
 
     <item
-        android:id="@+id/mainScreen"
-        android:icon=""
+        android:title=""
+        android:id="@+id/explore"
+        android:icon="@color/black"
+
         />
 
     <item
+        android:title=""
         android:id="@+id/profile"
-        android:icon= ""
+        android:icon="@color/black"
+
         />
 </menu>
