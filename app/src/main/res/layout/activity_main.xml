@@ -39,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="#262626"
 
-        app:menu="@menu/bottom_nav"
+        app:abb_tabs="@menu/bottom_nav"
 
         app:abb_indicatorAppearance="round"
         app:abb_indicatorLocation="top"
@@ -57,7 +57,6 @@
         app:abb_tabColorSelected="@color/black"
         app:abb_tabColorDisabled="@android:color/holo_blue_light"
         app:abb_iconSize="30dp"
-
 
 
         />
