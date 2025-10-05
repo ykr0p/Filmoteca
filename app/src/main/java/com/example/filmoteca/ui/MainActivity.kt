@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         val api = RetrofitInit.api
         val remoteDataSource = MovieRemoteDataSourceImpl(api)
         val repository = MovieRepositoryImpl(remoteDataSource)
-        val useCase = GetPopularMoviesUseCase(repository)
+        val useCase = GetReleasedMoviesUseCase(repository)
         val factory = MovieListViewModelFactory(useCase)
 
         // Создание ViewModel

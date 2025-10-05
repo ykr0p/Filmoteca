@@ -36,6 +36,8 @@ espressoCore = "3.6.1"
 # Paging 3
 paging = "3.3.6"
 
+library = "1.1.0"
+
 [libraries]
 
 
@@ -83,6 +85,8 @@ activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+library = { module = "nl.joery.animatedbottombar:library", version.ref = "library" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,5 +1,4 @@
-﻿// восстановление после удаления
-package com.example.filmoteca.ui
+﻿package com.example.filmoteca.ui
 
 import android.content.Context
 import android.widget.Toast
