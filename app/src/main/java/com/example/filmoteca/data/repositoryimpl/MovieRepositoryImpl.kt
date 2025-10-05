@@ -8,7 +8,6 @@ import com.example.filmoteca.domain.movie.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-
 class MovieRepositoryImpl( private val remoteDataSource: MovieRemoteDataSource): MovieRepository {
 
     override fun getReleasedMovies(): Flow<List<Movie>> = flow {
