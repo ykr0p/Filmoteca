@@ -23,10 +23,45 @@
         android:id="@+id/loadMoreProgress"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:indeterminate="true"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainActBottomNav"
+        />
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/mainActBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainActFrameLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#262626"
+
+        app:abb_tabs="@menu/bottom_nav"
+
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorLocation="top"
+        app:abb_indicatorMargin="12dp"
+        app:abb_indicatorHeight="5dp"
+        app:abb_indicatorColor = "@color/white"
+        app:abb_indicatorAnimation="slide"
+
+        app:abb_tabAnimation="slide"
+        app:abb_tabAnimationSelected="slide"
+        app:abb_animationInterpolator="@android:anim/anticipate_overshoot_interpolator"
+
+        app:abb_selectedTabType="icon"
+        app:abb_tabColor="@android:color/holo_blue_light"
+        app:abb_tabColorSelected="@color/black"
+        app:abb_tabColorDisabled="@android:color/holo_blue_light"
+        app:abb_iconSize="30dp"
+
+
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
