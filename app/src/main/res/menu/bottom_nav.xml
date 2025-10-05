@@ -3,17 +3,17 @@
 
 
     <item
-        android:id="@+id/home"
-        android:icon="@drawable/common_home"
-        android:title="Home" />
+        android:id="@+id/"
+        android:icon=""
+        />
 
     <item
-        android:id="@+id/explore"
-        android:icon="@drawable/common_explore"
-        android:title="Explore" />
+        android:id="@+id/mainScreen"
+        android:icon=""
+        />
 
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/common_profile"
-        android:title="Profile" />
+        android:icon= ""
+        />
 </menu>
