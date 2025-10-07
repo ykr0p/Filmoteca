@@ -2,21 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-
     android:id="@+id/home"
-    android:icon="@drawable/common_home"
-    android:title="Home" />
+    android:icon="@drawable/active_home"
+    android:title="" />
 
     <item
-
     android:id="@+id/explore"
-    android:icon="@drawable/common_explore"
-    android:title="Explore" />
+    android:icon="@drawable/active_explore"
+    android:title="" />
 
     <item
-
-    android:icon="@drawable/common_profile"
-    android:title="Profile" />
+    android:id="@+id/profile"
+    android:icon="@drawable/active_profile"
+    android:title="" />
 
 
 </menu>
