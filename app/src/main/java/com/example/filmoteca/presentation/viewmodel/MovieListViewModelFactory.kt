@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.filmoteca.domain.movie.usecase.GetReleasedMoviesUseCase
 
 class MovieListViewModelFactory(
-    private val getPopularMoviesUseCase: GetReleasedMoviesUseCase
+    private val getReleasedMoviesUseCase: GetReleasedMoviesUseCase
 ) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MovieListViewModel::class.java)) {
-            return MovieListViewModel(getPopularMoviesUseCase) as T
+            return MovieListViewModel(getReleasedMoviesUseCase) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
