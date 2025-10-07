@@ -47,7 +47,7 @@
         app:abb_indicatorLocation="top"
         app:abb_indicatorMargin="12dp"
         app:abb_indicatorHeight="5dp"
-        app:abb_indicatorColor = "@color/white"
+        app:abb_indicatorColor = "#386BF6"
         app:abb_indicatorAnimation="slide"
 
         app:abb_tabAnimation="slide"
@@ -55,10 +55,13 @@
         app:abb_animationInterpolator="@android:anim/anticipate_overshoot_interpolator"
 
         app:abb_selectedTabType="icon"
-        app:abb_tabColor="@android:color/holo_blue_light"
-        app:abb_tabColorSelected="@color/black"
-        app:abb_tabColorDisabled="@android:color/holo_blue_light"
-        app:abb_iconSize="30dp"
+        app:abb_tabColor="@android:color/darker_gray"
+        app:abb_tabColorSelected="#386BF6"
+        app:abb_tabColorDisabled="#FFFFFF"
+        app:abb_iconSize="33dp"
+        app:abb_selectedTabId="@id/home"
+
+
 
 
         />
