@@ -1,23 +1,10 @@
 package com.example.filmoteca.ui
 
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.filmoteca.data.datasources.remote.movie.MovieRemoteDataSourceImpl
-import com.example.filmoteca.data.remote.network.RetrofitInit
-import com.example.filmoteca.data.repositoryimpl.MovieRepositoryImpl
 import com.example.filmoteca.databinding.ActivityMainBinding
-import com.example.filmoteca.domain.movie.usecase.GetReleasedMoviesUseCase
-import com.example.filmoteca.presentation.viewmodel.MovieListViewModel
-import com.example.filmoteca.presentation.viewmodel.MovieListViewModelFactory
-import com.example.filmoteca.ui.movie.adapter.MovieAdapter
-import kotlinx.coroutines.launch
 
 import android.view.View
 
