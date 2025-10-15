@@ -24,8 +24,6 @@ import android.view.View
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var viewModel: MovieListViewModel
-    private lateinit var adapter: MovieAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,39 +38,7 @@ class MainActivity : AppCompatActivity() {
         // bottom nav
         setupBottomNav(binding.mainActBottomNav, this)
 
-        // Инициализация зависимостей
-        val api = RetrofitInit.api
-        val remoteDataSource = MovieRemoteDataSourceImpl(api)
-        val repository = MovieRepositoryImpl(remoteDataSource)
-        val useCase = GetReleasedMoviesUseCase(repository)
-        val factory = MovieListViewModelFactory(useCase)
-
-        // Создание ViewModel
-        viewModel = ViewModelProvider(this, factory)[MovieListViewModel::class.java]
-
-        // Настройка RecyclerView
-        adapter = MovieAdapter()
-        binding.moviesRecyclerView.layoutManager = GridLayoutManager(this, 2)
-        binding.moviesRecyclerView.adapter = adapter
-
-        // Подписка на данные
-        lifecycleScope.launch {
-            viewModel.movies.collect { movies ->
-                adapter.setItems(movies)
-            }
-        }
-
-        // Подписка на ошибки
-        lifecycleScope.launch {
-            viewModel.error.collect { error ->
-                Toast.makeText(this@MainActivity, error, Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        // Загрузка данных
-        viewModel.loadMovies()
     }
-
 
 
     // hide native android bottom navigation
